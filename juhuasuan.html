@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<title></title>
+<script>
+	(function(win,doc){
+		function change(){
+			doc.documentElement.style.fontSize = doc.documentElement.clientWidth/320*20+'px';
+		};
+		change();
+		win.addEventListener('resize',change,false);
+	})(window,document)
+</script>
+<style>
+	*{
+		margin:0;
+		padding:0;
+		list-style: none;
+	}
+	.head{
+		width:100%;
+		height:2.5rem;
+		background:linear-gradient(#fff,#ebebeb);
+		overflow: hidden;
+		position: relative;
+	}
+	.logo{
+		width:3.7rem;
+		height:0.975rem;
+		margin:0.75rem auto;
+		text-indent: -99rem;
+		background:url(img/logo.png) no-repeat;
+		background-size: 100%;
+	}
+	.back{
+		width:3.1rem;
+		height:1.5rem;
+		position:absolute;
+		background: url(img/back.png) no-repeat;
+		background-size: 100%;
+		text-indent: -99rem;
+		left:0.5rem;
+		top:0.5rem;
+	}
+	.banner{
+		width:100%;
+		overflow: hidden;
+	}
+	.pict{
+		  display:-webkit-box;
+	 	  height:100%;
+	 	  width:700%;
+	 	  -webkit-transform:translate3d(-16rem,0px,0px);
+
+	  }
+	.pict li{ 
+		 -webkit-box-flex:1; 
+		 height:100%; 
+	}
+	.pict li img{
+		width:16rem;
+		height:6.7rem;
+	}
+	.banlist{
+		margin:0.5rem auto;
+		width:2.5rem;
+		height:0.75rem;
+
+	}
+	.banlist li{
+		width:0.25rem;
+		height:0.25rem;
+		background:#a9a9a9;
+		border-radius: 50%;
+		float: left;
+		margin-right: 0.25rem;
+	}
+	.banlist li:nth-last-child(1){
+			margin-right: 0rem;
+			
+	}
+	.banlist .on{
+		background:#ff4300;
+	}
+	.things{
+		width:13.5rem;
+		margin:0 auto;
+		overflow: hidden;
+	}
+	.things li{
+		background: url(img/coffe.png) no-repeat;
+		width:2rem;
+		height:2rem;
+		float: left;
+		margin:1rem 1.75rem 1rem 0;
+		background-size:100%;
+	}
+	.things li:nth-child(4n){
+		margin-right:0;
+
+	}
+	.things li span{
+		height:0.5rem;
+		padding-top: 0.5rem;
+		display: block;
+		margin:2rem auto 0;
+		font-size: 0.5rem;
+		text-align: center;
+	}
+	.secte{
+		width:calc(100% - 1rem);
+		padding:0 0.5rem;
+		overflow: hidden;
+	}
+	.title1{
+	width:100%;
+	height:1.25rem;
+	margin-top:1.5rem;
+	border-bottom:0.1rem solid #dcdcdc;
+
+	}
+	.saletitl{
+		font-size: 0.625rem;
+		border-left: 0.1rem solid #d51938;
+		margin-bottom: 0.5rem;
+		padding-left: 0.5rem;
+		float:left;
+	}
+	.saletitr{
+		font-size: 0.625rem;
+		margin-bottom: 0.5rem;
+		float:right;
+	}
+	.salelist{
+		width:100%;
+		overflow: hidden;
+		padding-top: 0.75rem;
+	}
+	.salelist li{
+		width:100%;
+		height:3rem;
+		margin-top:0.75rem;
+		margin-bottom: 0.5rem; 
+		position: relative;
+	}
+	.salelist li:nth-last-child(1){
+		width:100%;
+		height:2.2rem;
+		
+		background: #f5f5f5;
+	}
+	.salelist li a{
+		font-size: 0.625rem;
+		color:#666666;
+		text-decoration: none;
+		display: block;
+		width: 100%;
+		height:100%;
+		line-height: 2.2rem;
+		text-align: center;
+
+	}
+	.sll{
+		width:6rem;
+		height:3rem;
+		float: left;
+	}
+	.sll span{
+		width:1.5rem;
+		height:3rem;
+		float: left;
+		background:red;
+		font-size: 0.875rem;
+		color:#fff;
+		text-align: center;
+		line-height: 3rem;
+		font-weight: bold;
+	}
+	.sll img{
+		width:4.5rem;
+		height:3rem;
+		float: right;
+	}
+	.slr{
+		width:7.5rem;
+		height:1.5rem;
+		float:right;
+		background:url(img/right.png) no-repeat 8.175rem 1.1rem #f4f4f4;
+		background-size: 4%;
+		padding:0.75rem;
+		font-size: 0.5rem;
+		color: #999999;
+		/*position: relative;*/
+	}
+	.slr p{
+		margin-bottom: 0.375rem;
+	}
+	.slr em{
+		color:red;
+		font-style: normal;
+	}
+	.slr i{
+		font-style: normal;
+		text-decoration: line-through;
+		margin-left: 0.5rem;
+	}
+	.slr span{
+		position: absolute;
+		right:1.25rem;
+		top:1rem;
+		font-size: 0.625rem;
+		font-weight: bold;
+		color:red;
+	}
+	.shop{
+		width:100%;
+		overflow: hidden;
+		/*margin-top: 0.5rem;*/
+	}
+	.shopname{
+		width:100%;
+		margin-top: 0.5rem;
+	}
+	.shopname img{
+		width:3.75rem;
+		height:100%;
+		float: left;
+		
+	}
+	.sc{
+		overflow: hidden; 
+	}
+	.little{
+		width:11.2rem;
+		height:100%;
+		float: left;
+		border-top: 1px solid #eeeeee;
+		border-left: 1px solid #eeeeee;
+		overflow: hidden;
+		/*background:red;*/
+	}
+	.little li{
+		width:3.675rem;
+		height:2.15rem;
+		float: left;
+		border-bottom: 1px solid #eeeeee;
+		border-right: 1px solid #eeeeee;
+		text-align: center;
+		line-height: 2.15rem;
+		font-size:0.625rem; 
+		color:#999999;
+	}
+	.more{
+		width:100%;
+		height:2.15rem;
+		background:url(img/right.png) no-repeat 14.25rem 0.75rem #f4f4f4;
+		background-size: 3%;
+		margin-top:0.5rem;
+	}
+	.more a{
+		width:100%;
+		height:2.15rem;
+		display: block;
+		font-size: 0.625rem;
+		color:#666666;
+		text-decoration: none;
+		line-height: 2.15rem;
+		text-align: center;
+	}
+	.friends{
+		width:15rem;
+		height:4rem;
+		display: -webkit-box;
+		margin-top: 1rem;
+	}
+	.friends a{
+		/*width:5rem;*/
+		display:block;
+		/*height:4rem;*/
+		-webkit-box-flex:1; 
+	}
+	.friends a img{
+		width:5rem;
+		height:4rem;
+	}
+	.foot{
+		margin-top: 0.5rem;
+		width:100%;
+	}
+	.footop{
+		width: 100%;
+		height:2.25rem;
+		background: #f8f8f8;
+		line-height: 2.25rem;
+		position: relative;
+	}
+	.footop a{
+		font-size: 0.625rem;
+		margin-left:0.5rem;
+		text-decoration: none;
+		color:#000;
+	}
+	.top{
+		font-size: 0.625rem;
+		margin-left:0.5rem;
+		text-decoration: none;
+		color:#000;
+		position: absolute;
+		right:1rem;
+
+	}
+	.footbot{
+		width:100%;
+		height:3.25rem;
+		background:#eeeeee;
+		text-align: center;
+	}
+	.footbot a{
+		font-size: 0.625rem;
+		margin-left:0.5rem;
+		text-decoration: none;
+		color:#000;
+		display: inline-block;
+		margin-top: 1rem;
+	}
+	.text{
+		font-size:0.625rem;
+		color:#999999;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function(){
+		var oPic = document.querySelector('.pict');
+		var oBl =  document.querySelector('.banlist');
+		var aLi = oPic.children;
+		var aLis = oBl.children;
+		var iNow = 1;
+		var bOk = true;
+		var oW = document.documentElement.clientWidth;
+		var x = -oW;
+
+		oPic.addEventListener('touchstart',function(ev){
+				if(!bOk)return;
+				bOk = false;
+				oPic.style.WebkitTransition = 'none';
+				var downX = ev.targetTouches[0].clientX;
+				var disX = downX-x;
+				document.addEventListener('touchmove',drag,false);
+				document.addEventListener('touchend',end,false);
+				
+				
+				function drag(ev){
+					x = ev.targetTouches[0].clientX - disX;
+					oPic.style.WebkitTransform = 'translate3d('+x+'px,0,0)';
+				}
+				function end(ev){
+					document.removeEventListener('touchmove',drag,false);
+					document.removeEventListener('touchend',end,false);
+					var upX = ev.changedTouches[0].clientX
+					var oX = upX - downX;
+					if(Math.abs(oX)>50){
+						if(upX>downX){
+							iNow--;
+							
+						}
+						if(upX<downX){
+							iNow++;
+							
+						}
+					}
+					oPic.addEventListener('transitionend',one,false)
+					function one(){
+
+						oPic.removeEventListener('transitionend',one,false);
+						if(iNow==0){
+							iNow=aLi.length-2;
+						}
+						if(iNow==aLi.length-1){
+							iNow=1;
+						}
+						
+						x = -oW*iNow;
+						oPic.style.WebkitTransition = 'none';
+					oPic.style.WebkitTransform='translate3d('+x+',0,0)';
+						bOk = true;
+					}
+					x = -oW*iNow;
+					oPic.style.WebkitTransition = '1s transform ease';
+					oPic.style.WebkitTransform='translate3d('+x+'px,0,0)';
+					var n = iNow-1;
+					if(iNow == 6){
+							n = 0;
+						}
+					if(n == -1){
+						n = 4;
+					}
+				
+					for(var j=0;j<aLis.length;j++){
+						aLis[j].className = '';
+					}
+					
+					// console.log(n)
+					aLis[n].className = 'on';
+					
+				};
+				ev.preventDefault();	
+		},false);
+		
+
+	}
+</script>
+</head>
+<body>
+	<!-- /header -->  
+    <header class="head">
+    	<h1 class="logo">聚划算</h1>
+    	<a href="#" class="back">返回</a>
+	</header> 
+	<div class="banner">
+		<ul class="pict">
+			<li><img src="img/icon4.jpg" alt=""></li>
+			<li><img src="img/icon.png" alt=""></li>
+			<li><img src="img/icon1.jpg" alt=""></li>
+			<li><img src="img/icon2.jpg" alt=""></li>
+			<li><img src="img/icon3.jpg" alt=""></li>
+			<li><img src="img/icon4.jpg" alt=""></li>
+			<li><img src="img/icon.png" alt=""></li>
+			<!-- <li><img src="img/icon.png" alt=""></li> -->
+		</ul>
+		<ul class="banlist">
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul class="things">
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+			<li><span>生活</span></li>
+		</ul>
+	</div>
+	<section class="secte">
+		<div class="title1">
+			<h2 class="saletitl">聚划算拍卖排行</h2>
+			<h2 class="saletitr">TOP10</h2>
+		</div>
+		<ul class="salelist">
+			<li>
+				<div class="sll">
+					<span>1</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>2</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>3</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>4</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>5</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>6</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>7</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>8</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>9</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<div class="sll">
+					<span>10</span>
+					<img src="img/pic1.png" alt="">
+				</div>
+				<div class="slr">
+					<p>已售23312</p>
+					<article><em>2.3</em>折<i>￥299</i></article>
+					<span>￥51</span>
+				</div>
+			</li>
+			<li>
+				<a href="#">更多划算 逛起来!</a>
+			</li>
+		</ul>
+		<ul class="shop">
+			<li class="shopname">
+				<div class="sc">
+					<img src="img/shop1.png" alt="">
+					<ul class="little">
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+					</ul>
+				</div>
+				<div class="more"><a href="#">精彩商品 逛起来!</a></div>		
+			</li>
+			<li class="shopname">
+				<div class="sc">
+					<img src="img/shop2.png" alt="">
+					<ul class="little">
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+					</ul>
+				</div>
+				<div class="more"><a href="#">精彩商品 逛起来!</a></div>		
+			</li>
+			<li class="shopname">
+				<div class="sc">
+					<img src="img/shop3.png" alt="">
+					<ul class="little">
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+						<li>美妆</li>
+						<li>服饰</li>
+					</ul>
+				</div>
+				<div class="more"><a href="#">精彩商品 逛起来!</a></div>		
+			</li>
+		</ul>
+		<div class="friends">
+			<a href="#"><img src="img/ios.png" alt=""></a>
+			<a href="#"><img src="img/and.png" alt=""></a>
+			<a href="#"><img src="img/yijian.png" alt=""></a>
+		</div>
+	</section>
+	<footer class="foot">
+		<div class="footop">
+			<a href="#">登录</a>
+			<a href="#">注册</a>
+			<a href="#" class="top">TOP</a>
+		</div>
+		<div class="footbot">
+			<a href="#">标准版</a>
+			<a href="#">电脑版</a>
+			<p class="text">@23133-21321 服务中心</p>
+		</div>
+	</footer>
+</body>
+</html>
